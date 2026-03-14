@@ -670,7 +670,9 @@ ul {
   }
 
   .hero {
+    min-height: 60vh; /* フォールバック */
     min-height: 60svh;
+    align-items: start;
   }
 
    html {
