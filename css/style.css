@@ -717,13 +717,19 @@ ul {
   .about-grid,
   .feature-grid,
   .activity-grid,
-  .contact-grid,
+  /* .contact-grid, */
   .gallery-grid,
   .recruit-list,
   .access-layout {
     grid-template-columns: 1fr;
   }
 
+  .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  }
   .map-card {
     min-height: 300px;
   }
@@ -740,3 +746,101 @@ ul {
     padding: 26px 20px;
   }
 }
+
+/* =========================================
+   Xperia 1 VI 向け追加レスポンシブ調整
+========================================= */
+@media (max-width: 430px) {
+  /* ヒーロー */
+  .hero {
+    min-height: 62svh;
+    align-items: start;
+  }
+
+  .hero-content {
+    padding: 20px 0 108px;
+  }
+
+  .hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    line-height: 1.18;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    margin: 0 0 22px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-dots {
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  /* 活動場所セクション
+     テキストと地図を縦並び */
+  .access-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .access-text {
+    order: 1;
+  }
+
+  .map-card {
+    order: 2;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .map-card iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 14px;
+  }
+
+  .access-list {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .access-list li {
+    padding: 12px 14px;
+  }
+
+  /* お問い合わせカードを同じサイズに調整 */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 190px;
+    height: 100%;
+  }
+
+  .contact-card h3 {
+    margin: 0 0 12px;
+    min-height: 2.8em;
+    line-height: 1.4;
+  }
+
+  .contact-card p {
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
