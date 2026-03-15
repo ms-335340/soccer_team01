@@ -516,7 +516,8 @@ ul {
 
 .recruit-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -584,6 +585,15 @@ ul {
   padding-bottom: 110px;
 }
 
+/* コンタクトグリッド 調整 */
+/* .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+} */
+
+
+
 .contact-card {
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
@@ -648,10 +658,6 @@ ul {
     padding: 120px 0 90px;
   }
 
-
-
-
-
   .about-grid,
   .feature-grid,
   .activity-grid,
@@ -661,6 +667,7 @@ ul {
   .access-layout {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 /* スマートフォン */
@@ -690,7 +697,9 @@ ul {
   }
 
   .hero-content {
-     padding: 28px 0 146px;
+    /* padding: 28px 0 146px; */
+    padding: 5px 0 20px;
+
   }
 
   .hero-copy {
