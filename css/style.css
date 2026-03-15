@@ -758,7 +758,7 @@ ul {
   }
 
   .hero-content {
-    padding: 20px 0 108px;
+    padding: 10px 0 40px;
   }
 
   .hero h1 {
@@ -783,7 +783,11 @@ ul {
     justify-content: center;
     margin-top: 18px;
   }
-
+   html {
+    /* ヘッダーの高さが145pxの場合 */
+    scroll-padding-top: 145px;
+   } 
+   
   /* 活動場所セクション
      テキストと地図を縦並び */
   .access-layout {
